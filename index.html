@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="web/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header start -->
+    <!-- topest nav -->
+    <div class="toppestnav">
+        <p>10% off on this Christmas and New Year</p>
+    </div>
+    <!-- middle nav -->
+    <div class="middlenav">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div>
+                <img src="web/images/logomain.png" width="60" alt="">
+            </div>
+            <div>
+                <i class="bi bi-person-circle"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-cart3"></i>
+                <i class="bi bi-three-dots-vertical d-lg-none"></i>
+            </div>
+        </div>
+    </div>
+    <!-- bottom nav -->
+    <nav>
+        <div class="container d-flex align-items-center">
+            <p class="ourallcatg">
+                <i class="bi bi-list-nested"></i> All Categories
+            </p>
+            <div class="d-lg-block d-none">
+                <ul class="d-flex gap-5">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header end -->
+    <!-- category list -->
+    <div class="categorymenu">
+        <div>
+            <div class="categorymenuclose">
+                <i class="bi bi-x categorymenuclosebtn"></i>
+                <p class="mb-0">CATEGORIES</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>BESTSELLERS</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>New Arrival</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>Shirts</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>jeans</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>jacket</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>sweaters</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>BESTSELLERS</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>New Arrival</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="web/images/categoryimg1.jpg" width="80" alt="">
+                        <p>Shirts</p>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- banners  -->
+    <style>
+        .slick-next {
+            right: calc(25px + 1.25rem);
+        }
+
+        .slick-prev {
+            left: 25px;
+            z-index: 99;
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
+            font-size: 2.5rem;
+        }
+    </style>
+    <div class="single-item">
+        <div class="banners b1">
+            <div class="bannerscolor d-flex align-items-center">
+                <div class="container">
+                    <h1 class="playfair-display-font">Shirts</h1>
+                    <p>Leave a lasting impression</p>
+                </div>
+            </div>
+        </div>
+        <div class="banners b2">
+            <div class="bannerscolor d-flex align-items-center">
+                <div class="container">
+                    <h1 class="playfair-display-font">Shirts</h1>
+                    <p>Leave a lasting impression</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- featured category -->
+ <div class="my-3 fctg">
+    <div class="container-fluid">
+    <div class="text-center mb-5">
+        <p class="oursmallmainheading mb-0">Featured category</p>
+    </div>
+    <div class="row g-2 autoplay">
+        <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-2">
+            <div class="ctgtextdiv">
+                <img src="web/images/homecatg1.webp" class="img-fluid" alt="">
+                <div class="ctgtext">
+                    <p>Shirts</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+ </div>
+
+    <script src="web/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+       $('.single-item').slick({
+    autoplay: true,
+    autoplaySpeed: 800,  
+    speed: 3000,           
+    infinite: true
+  });
+
+  $('.autoplay').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 800,
+  speed: 1000,
+  infinite: true,
+  arrows: false,
+   responsive: [
+    {
+      breakpoint: 1200, // laptop
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 992, // tablet
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 576, // large mobile
+      settings: {
+        slidesToShow: 2
+      }
+    }
+   
+  ]
+});
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
