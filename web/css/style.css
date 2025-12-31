@@ -519,3 +519,48 @@ margin-bottom: 1rem;
 .ppdiv{
     margin: 1.5rem 0; 
 }
+
+
+
+
+
+
+/* shop page */
+.filterbtn{
+    font-weight: 700;
+    font-size: 18px;
+}
+.filterdiv{
+    width: 20vw;
+    max-height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    position: sticky;
+top: 0;
+    left: 0;
+background-color: #fff;
+z-index: 100;
+}
+.productdiv{
+    width: 80vw;
+}
+@media (max-width:992px) {
+    .filterdiv{
+        position: fixed;
+        left: -350px;
+        top: 0;
+width: 280px;
+    }
+    .productdiv{
+    width: 100vw;
+}
+
+}
+
+
+.activediv{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #e06c51;
+    text-decoration-thickness: 3px;
+}
