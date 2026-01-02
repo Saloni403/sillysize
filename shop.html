@@ -169,16 +169,17 @@
     <!-- shop - product section start-->
 <section>
     <div class="d-flex justify-content-end">
-        <div class="filterdiv">
-            <div>
-                <i class="bi bi-x"></i>
+        <div class="filterdiv py-3">
+            <div class="ps-3">
+                <i class="bi bi-x d-lg-none filtercloseBtn" style="font-size: 1.5rem;"></i>
             </div>
             <ul class="mainfilterlist">
-                <li>
-                    <p>SIZE</p>
-                    <div>
+                <li><div class="mainfilterlistdiv d-flex align-items-center justify-content-between p-3 ">
+                    <p class="mb-0">SIZE</p>
+                    <div class="dropdownicons">
                         <i class="bi bi-plus"></i>
                         <i class="bi bi-dash"></i>
+                    </div>
                     </div>
                    <ul class="sub-filterlist">
                     <li>XS</li>
@@ -193,78 +194,66 @@
                     <li>6XL</li>
                    </ul>
                 </li>
-                 <li>
-                    <p>SIZE</p>
-                    <div>
+                
+
+               <li><div class="mainfilterlistdiv d-flex align-items-center justify-content-between p-3">
+                    <p class="mb-0">COLOR</p>
+                    <div class="dropdownicons">
                         <i class="bi bi-plus"></i>
                         <i class="bi bi-dash"></i>
                     </div>
-                   <ul class="sub-filterlist">
-                    <li>XS</li>
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
-                    <li>XL</li>
-                    <li>XXL</li>
-                    <li>3XL</li>
-                    <li>4XL</li>
-                    <li>5XL</li>
-                    <li>6XL</li>
-                   </ul>
-                </li>
-                 <li>
-                    <p>SIZE</p>
-                    <div>
-                        <i class="bi bi-plus"></i>
-                        <i class="bi bi-dash"></i>
                     </div>
                    <ul class="sub-filterlist">
-                    <li>XS</li>
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
-                    <li>XL</li>
-                    <li>XXL</li>
-                    <li>3XL</li>
-                    <li>4XL</li>
-                    <li>5XL</li>
-                    <li>6XL</li>
+                    <li>Black</li>
+                    <li>White</li>
+                    <li>Blue</li>
+                    <li>grey</li>
+                    <li>beige</li>
+                    <li>green</li>
+                    <li>navy</li>
+                    <li>brown</li>
+                    <li>olive</li>
+                    <li>pink</li>
                    </ul>
                 </li>
-                 <li>
-                    <p>SIZE</p>
-                    <div>
-                        <i class="bi bi-plus"></i>
-                        <i class="bi bi-dash"></i>
-                    </div>
-                   <ul class="sub-filterlist">
-                    <li>XS</li>
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
-                    <li>XL</li>
-                    <li>XXL</li>
-                    <li>3XL</li>
-                    <li>4XL</li>
-                    <li>5XL</li>
-                    <li>6XL</li>
-                   </ul>
-                </li>
+
+
+               <li>
+    <div class="mainfilterlistdiv d-flex align-items-center justify-content-between p-3">
+        <p class="mb-0">PRICE</p>
+        <div class="dropdownicons">
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash"></i>
+        </div>
+    </div>
+
+    <div class="sub-filterlist price-filter">
+        <div class="price-inputs">
+            <input type="number" id="minPrice" placeholder="Min ₹" value="500">
+            <input type="number" id="maxPrice" placeholder="Max ₹" value="5000">
+        </div>
+
+        <button class="apply-btn">Apply</button>
+    </div>
+</li>
             </ul>
         </div>
-        <div class="productdiv my-3">
+       
+        <div class="productdiv py-3  bg-light">
 
            <div class="container-fluid">
             <div class="mb-3 filterbtn d-lg-none d-flex align-items-center justify-content-start">
                 <i class="bi bi-filter-left" style="font-size: 1.5rem;"></i> Filter
             </div>
+
             <div class="text-center selectdiv d-flex gap-4 align-items-center justify-content-center">
                 <p class="oursmallmainheading mb-0 activediv">All Products</p>
 
                 <p class="oursmallmainheading mb-0">Worth the wait</p>
             </div>
+            <h2 class="playfair-display-font my-4">Shirts</h2>
              <div class="productcardcategory my-4">
-                <ul class=" d-flex align-items-center justify-content-lg-center gap-3">
+                <ul class=" d-flex align-items-center justify-content-xl-center gap-3">
                     <li class="c_active">All</li>
                     <li class="">Shorts</li>
                     <li class="">Joggers</li>
@@ -465,11 +454,71 @@
             })
 
 
-            let filterbtn = document.querySelector(".filterbtn")
-            let filterdiv = document.querySelector(".filterdiv")
-            filterbtn.addEventListener("click",()=>{
-filterdiv.style.left="0"
-            })
+          let filterbtn = document.querySelector(".filterbtn");
+let filterdiv = document.querySelector(".filterdiv");
+let closeBtn = document.querySelector(".filtercloseBtn");
+
+// Open filter
+filterbtn.addEventListener("click", () => {
+    filterdiv.style.left = "0";
+});
+
+// Close filter
+closeBtn.addEventListener("click", () => {
+     filterdiv.style.left = "-350px";
+});
+
+// Fix issue when resizing screen
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 992) {
+        filterdiv.classList.remove("active");
+        filterdiv.style.left = "0";
+    } else {
+        filterdiv.style.left = "-350px";
+    }
+});
+
+  
+  
+  
+//   filter portion of the shop page
+            document.querySelectorAll(".mainfilterlist > li").forEach(list => {
+
+    const header = list.querySelector(".mainfilterlistdiv");
+    const subList = list.querySelector(".sub-filterlist");
+    const plus = list.querySelector(".bi-plus");
+    const minus = list.querySelector(".bi-dash");
+
+    // Toggle dropdown
+    header.addEventListener("click", () => {
+        subList.classList.toggle("togglemylist");
+
+        if (subList.classList.contains("togglemylist")) {
+            plus.style.display = "none";
+            minus.style.display = "block";
+        } else {
+            plus.style.display = "block";
+            minus.style.display = "none";
+        }
+    });
+});
+
+
+// PRICE FILTER BUTTON
+const applyBtn = document.querySelector(".apply-btn");
+
+if (applyBtn) {
+    applyBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent dropdown close
+
+        let min = document.getElementById("minPrice").value;
+        let max = document.getElementById("maxPrice").value;
+
+        console.log("Min Price:", min);
+        console.log("Max Price:", max);
+    });
+}
+
         </script>
 </body>
 </html>
