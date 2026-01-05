@@ -99,13 +99,14 @@
     <div class="middlenav">
         <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <img src="web/images/logomain.png" width="60" alt="">
+                <img src="web/images/logomain.png" width="60" class="mypointer" onclick="location.href='index.html'"
+                    alt="">
             </div>
-             <div>
-                <i class="bi bi-person-circle" onclick="location.href='login.html'"></i>
-                <i class="bi bi-heart" onclick="location.href='wishlist.html'"></i>
-                <i class="bi bi-cart3" onclick="location.href='cart.html'"></i>
-                <i class="bi bi-three-dots-vertical openmenu d-lg-none"></i>
+            <div>
+                <i class="bi bi-person-circle mypointer" onclick="location.href='login.html'"></i>
+                <i class="bi bi-heart mypointer" onclick="location.href='wishlist.html'"></i>
+                <i class="bi bi-cart3 mypointer" onclick="location.href='cart.html'"></i>
+                <i class="bi bi-three-dots-vertical openmenu d-lg-none mypointer"></i>
             </div>
         </div>
     </div>
@@ -126,7 +127,6 @@
             </div>
         </div>
     </nav>
-
     <!-- header end -->
     <!-- category list -->
     <div class="categorymenu">
@@ -354,10 +354,10 @@
 <!-- related product -->
 <div class="my-3 py-3 bg-light">
         <div class="container-fluid">
-            <div class="text-center">
+            <div class="text-center mb-3">
                 <p class="oursmallmainheading mb-0">Related products</p>
             </div>
-            <div class="productcardcategory my-4">
+            <!-- <div class="productcardcategory my-4">
                 <ul class="d-flex align-items-center justify-content-lg-center gap-3">
                     <li class="c_active">All</li>
                     <li class="">Shorts</li>
@@ -371,7 +371,7 @@
                     <li class="">Hoodies</li>
                     <li class="">Overshirts</li>
                 </ul>
-            </div>
+            </div> -->
             <div class="row gx-2 gy-5">
                 <div class="col-xl-3 col-md-4 col-6 productcard">
                     <div class="position-relative" onclick="location.href='product.html'">
@@ -417,62 +417,6 @@
 
                 <div class="col-xl-3 col-md-4 col-6 productcard">
                     <div class="position-relative">
-                        <img src="web/images/productimg/p4.jpg" class="img-fluid" alt="">
-                        <div class="productcardtext py-3 px-2">
-                            <div>
-                                <p class="mb-0">Casual Denim Jacket</p>
-                                <p class="mb-0"><del>₹250</del> ₹120</p>
-                            </div>
-                            <i class="bi bi-cart3"></i>
-                        </div>
-                        <i class="bi bi-heart productcardwishlist"></i>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-4 col-6 productcard">
-                    <div class="position-relative">
-                        <img src="web/images/productimg/p5.jpg" class="img-fluid" alt="">
-                        <div class="productcardtext py-3 px-2">
-                            <div>
-                                <p class="mb-0">Casual Denim Jacket</p>
-                                <p class="mb-0"><del>₹250</del> ₹120</p>
-                            </div>
-                            <i class="bi bi-cart3"></i>
-                        </div>
-                        <i class="bi bi-heart productcardwishlist"></i>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-4 col-6 productcard">
-                    <div class="position-relative">
-                        <img src="web/images/productimg/p6.jpg" class="img-fluid" alt="">
-                        <div class="productcardtext py-3 px-2">
-                            <div>
-                                <p class="mb-0">Casual Denim Jacket</p>
-                                <p class="mb-0"><del>₹250</del> ₹120</p>
-                            </div>
-                            <i class="bi bi-cart3"></i>
-                        </div>
-                        <i class="bi bi-heart productcardwishlist"></i>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-4 col-6 productcard">
-                    <div class="position-relative">
-                        <img src="web/images/productimg/p7.jpg" class="img-fluid" alt="">
-                        <div class="productcardtext py-3 px-2">
-                            <div>
-                                <p class="mb-0">Casual Denim Jacket</p>
-                                <p class="mb-0"><del>₹250</del> ₹120</p>
-                            </div>
-                            <i class="bi bi-cart3"></i>
-                        </div>
-                        <i class="bi bi-heart productcardwishlist"></i>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-4 col-6 productcard">
-                    <div class="position-relative">
                         <img src="web/images/productimg/p8.jpg" class="img-fluid" alt="">
                         <div class="productcardtext py-3 px-2">
                             <div>
@@ -488,19 +432,18 @@
 
             </div>
             <div class="text-center mt-5">
-                <button>show more</button>
+                <button onclick="location.href='shop.html'">show more</button>
             </div>
         </div>
     </div>
 
-    
-  <!-- footer -->
+   <!-- footer -->
     <footer class="py-5">
         <div class="container">
             <div class="row gy-5">
                 <div class="col-md-4 col-sm-6">
                     <div>
-                        <img src="web/images/logomain.png" width="100" alt="">
+                        <img src="web/images/logomain.png" width="100" class="mypointer" onclick="location.href='index.html'" alt="">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -560,6 +503,15 @@ thumbnails.forEach(img => {
         img.classList.add("active-thumb");
     });
 });
+
+
+// 
+document.querySelectorAll(".productcard").forEach(p_card=>{
+    p_card.style.cursor="pointer"
+    p_card.querySelector("div").addEventListener("click",()=>{
+location.href='product.html'
+    })
+})
 </script>
 
 </body>

@@ -18,7 +18,7 @@
 
 </head>
 <body>
-      <!-- header start -->
+     <!-- header start -->
     <!-- topest nav -->
     <div class="toppestnav">
         <p>10% off on this Christmas and New Year</p>
@@ -27,13 +27,14 @@
     <div class="middlenav">
         <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <img src="web/images/logomain.png" width="60" alt="">
+                <img src="web/images/logomain.png" width="60" class="mypointer" onclick="location.href='index.html'"
+                    alt="">
             </div>
-             <div>
-                <i class="bi bi-person-circle" onclick="location.href='login.html'"></i>
-                <i class="bi bi-heart" onclick="location.href='wishlist.html'"></i>
-                <i class="bi bi-cart3" onclick="location.href='cart.html'"></i>
-                <i class="bi bi-three-dots-vertical openmenu d-lg-none"></i>
+            <div>
+                <i class="bi bi-person-circle mypointer" onclick="location.href='login.html'"></i>
+                <i class="bi bi-heart mypointer" onclick="location.href='wishlist.html'"></i>
+                <i class="bi bi-cart3 mypointer" onclick="location.href='cart.html'"></i>
+                <i class="bi bi-three-dots-vertical openmenu d-lg-none mypointer"></i>
             </div>
         </div>
     </div>
@@ -54,7 +55,6 @@
             </div>
         </div>
     </nav>
-
     <!-- header end -->
     <!-- category list -->
     <div class="categorymenu">
@@ -393,13 +393,13 @@
 
 <!-- shop - product section end-->
 
- <!-- footer -->
+    <!-- footer -->
     <footer class="py-5">
         <div class="container">
             <div class="row gy-5">
                 <div class="col-md-4 col-sm-6">
                     <div>
-                        <img src="web/images/logomain.png" width="100" alt="">
+                        <img src="web/images/logomain.png" width="100" class="mypointer" onclick="location.href='index.html'" alt="">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -520,6 +520,27 @@ if (applyBtn) {
     });
 }
 
+// 
+ document.querySelectorAll(".productcardcategory").forEach(categoryBox => {
+  const items = categoryBox.querySelectorAll("li");
+
+  items.forEach(item => {
+    item.style.cursor="pointer"
+    item.addEventListener("click", () => {
+      items.forEach(li => li.classList.remove("c_active"));
+      item.classList.add("c_active");
+    });
+  });
+});
+
+
+// 
+document.querySelectorAll(".productcard").forEach(p_card=>{
+    p_card.style.cursor="pointer"
+    p_card.querySelector("div").addEventListener("click",()=>{
+location.href='product.html'
+    })
+})
         </script>
 </body>
 </html>

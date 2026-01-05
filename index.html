@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SillySize | Home</title>
-     <link rel="icon" type="image/png" href="web/images/logomain.png">
+    <link rel="icon" type="image/png" href="web/images/logomain.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -30,13 +30,14 @@
     <div class="middlenav">
         <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <img src="web/images/logomain.png" width="60" alt="">
+                <img src="web/images/logomain.png" width="60" class="mypointer" onclick="location.href='index.html'"
+                    alt="">
             </div>
             <div>
-                <i class="bi bi-person-circle" onclick="location.href='login.html'"></i>
-                <i class="bi bi-heart" onclick="location.href='wishlist.html'"></i>
-                <i class="bi bi-cart3" onclick="location.href='cart.html'"></i>
-                <i class="bi bi-three-dots-vertical openmenu d-lg-none"></i>
+                <i class="bi bi-person-circle mypointer" onclick="location.href='login.html'"></i>
+                <i class="bi bi-heart mypointer" onclick="location.href='wishlist.html'"></i>
+                <i class="bi bi-cart3 mypointer" onclick="location.href='cart.html'"></i>
+                <i class="bi bi-three-dots-vertical openmenu d-lg-none mypointer"></i>
             </div>
         </div>
     </div>
@@ -57,7 +58,6 @@
             </div>
         </div>
     </nav>
-
     <!-- header end -->
     <!-- category list -->
     <div class="categorymenu">
@@ -336,7 +336,7 @@
             </div>
             <div class="row gx-2 gy-5">
                 <div class="col-xl-3 col-md-4 col-6 productcard">
-                    <div class="position-relative" onclick="location.href='product.html'">
+                    <div class="position-relative">
                         <img src="web/images/productimg/p1.jpg" class="img-fluid" alt="">
                         <div class="productcardtext py-3 px-2">
                             <div>
@@ -450,7 +450,7 @@
 
             </div>
             <div class="text-center mt-5">
-                <button>show more</button>
+                <button class="mypointer" onclick="location.href='shop.html'">show more</button>
             </div>
         </div>
     </div>
@@ -467,7 +467,7 @@
             <div class="text-center">
                 <p class="oursmallmainheading mb-0">bestsellers</p>
             </div>
-             <div class="productcardcategory my-4">
+            <div class="productcardcategory my-4">
                 <ul class=" d-flex align-items-center justify-content-lg-center gap-3">
                     <li class="c_active">All</li>
                     <li class="">Shorts</li>
@@ -598,7 +598,7 @@
 
             </div>
             <div class="text-center mt-5">
-                <button>show more</button>
+                <button class="mypointer" onclick="location.href='shop.html'">show more</button>
             </div>
         </div>
     </div>
@@ -610,7 +610,7 @@
             <div class="row gy-5">
                 <div class="col-md-4 col-sm-6">
                     <div>
-                        <img src="web/images/logomain.png" width="100" alt="">
+                        <img src="web/images/logomain.png" width="100" class="mypointer" onclick="location.href='index.html'" alt="">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -695,6 +695,37 @@
             ]
         });
 
+    </script>
+
+    <script>
+        // featured category
+        document.querySelectorAll(".ctgtextdiv").forEach(catg => {
+            catg.addEventListener("click", () => {
+                location.href = "shop.html";
+            })
+        })
+
+        // 
+     document.querySelectorAll(".productcardcategory").forEach(categoryBox => {
+  const items = categoryBox.querySelectorAll("li");
+
+  items.forEach(item => {
+    item.style.cursor="pointer"
+    item.addEventListener("click", () => {
+      items.forEach(li => li.classList.remove("c_active"));
+      item.classList.add("c_active");
+    });
+  });
+});
+
+
+// 
+document.querySelectorAll(".productcard").forEach(p_card=>{
+    p_card.style.cursor="pointer"
+    p_card.querySelector("div").addEventListener("click",()=>{
+location.href='product.html'
+    })
+})
     </script>
 </body>
 
