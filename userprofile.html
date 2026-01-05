@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>SillySize | Contact us</title>
+    <title>SillySize | User profile</title>
      <link rel="icon" type="image/png" href="web/images/logomain.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="web/css/style.css">
-
+     <link rel="stylesheet" href="web/css/style.css">
+    
 </head>
 <body>
+
       <!-- header start -->
     <!-- topest nav -->
     <div class="toppestnav">
@@ -29,7 +24,7 @@
             <div>
                 <img src="web/images/logomain.png" width="60" alt="">
             </div>
-            <div>
+             <div>
                 <i class="bi bi-person-circle" onclick="location.href='login.html'"></i>
                 <i class="bi bi-heart" onclick="location.href='wishlist.html'"></i>
                 <i class="bi bi-cart3" onclick="location.href='cart.html'"></i>
@@ -156,104 +151,71 @@
     </section>
     <!-- menu end -->
 
-       <!-- small banner -->
-
-    <div class="smallbanner">
-        <img src="web/images/bannerwithouttext.jpg" class="img-fluid" alt="">
-        <div class="container">
-            <h1 class="playfair-display-font">Contact Us</h1>
-            <p><span onclick="location.href='index.html'" style="cursor: pointer;">HOME /</span> CONTACT</p>
+    <!-- dashboard -->
+ <!-- <section>
+  <div class="">
+    <div class="mainleftdiv">
+        <div class="arrowicon">
+            <i class="bi bi-arrow-right"></i>
         </div>
+        <ul>
+            <li>DASHBOARD</li>
+            <li>HOME</li>
+            <li>ORDER HISTORY</li>
+            <li>PROFILE</li>
+        </ul>
+    </div>
+  </div>
+</section> -->
+
+<!-- DASHBOARD -->
+<section class="user-dashboard">
+  <div class="dashboard-container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="mainleftdiv">
+      <!-- <div class="arrowicon">
+        <i class="bi bi-arrow-left"></i>
+      </div> -->
+
+      <ul>
+        <li class="active" onclick="changeTab('dashboard', this)">DASHBOARD</li>
+        <li onclick="location.href='index.html'">HOME</li>
+        <li onclick="changeTab('orders', this)">ORDER HISTORY</li>
+        <li onclick="changeTab('profile', this)">PROFILE</li>
+      </ul>
     </div>
 
-<!-- contact -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row g-4">
+    <!-- RIGHT CONTENT -->
+    <div class="mainrightdiv">
+      <div id="dashboardContent">
 
-            <!-- LEFT SIDE : CONTACT CARDS -->
-            <div class="col-lg-5">
-                <div class="row g-4">
+        <!-- Default Content -->
+        <h2>Welcome Back 👋</h2>
+        <p class="text-muted">
+          Manage your orders, profile and account settings here.
+        </p>
 
-                    <div class="col-12">
-                        <div class="p-4 bg-white border rounded shadow-sm h-100">
-                            <h5><i class="bi bi-geo-alt me-2"></i>Our Address</h5>
-                            <p class="mb-0">123, Fashion Street, New Delhi, India</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="p-4 bg-white border rounded shadow-sm h-100">
-                            <h5><i class="bi bi-telephone me-2"></i>Phone</h5>
-                            <p class="mb-0">+91 98765 43210</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="p-4 bg-white border rounded shadow-sm h-100">
-                            <h5><i class="bi bi-envelope me-2"></i>Email</h5>
-                            <p class="mb-0">info@sillysize.com</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE : CONTACT FORM -->
-            <div class="col-lg-7">
-                <div class="p-4 border rounded shadow-sm  bg-white">
-                    <h4 class="mb-4">Send Us a Message</h4>
-
-                    <form>
-                        <div class="row g-3">
-
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-
-                            <div class="col-12">
-                                <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-                            </div>
-
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-dark px-4">
-                                    Send Message
-                                </button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-
+        <div class="dashboard-cards">
+          <div class="dash-card">
+            <h4>🛒 Cart Items</h4>
+            <p>2 Products</p>
+          </div>
+          <div class="dash-card">
+            <h4>❤️ Wishlist</h4>
+            <p>5 Products</p>
+          </div>
+          <div class="dash-card">
+            <h4>📦 Orders</h4>
+            <p>3 Orders</p>
+          </div>
         </div>
+
+      </div>
     </div>
+
+  </div>
 </section>
-
-
-
-<!-- map -->
- <section>
-    <div class="container-fluid p-0">
-        <iframe 
-            src="https://www.google.com/maps?q=delhi&output=embed"
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
-
 
     <!-- footer -->
     <footer class="py-5">
@@ -299,10 +261,111 @@
         <a href="https://tssgtech.com/">© 2025 All Rights Reserved | Developed by Tssg-Tech.</a>
     </div>
 
-     <script src="web/js/script.js"></script>
+    <script src="web/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-   
+<script>
+function enableEditProfile() {
+  const content = document.getElementById("dashboardContent");
+
+  content.innerHTML = `
+    <h2>Edit Profile</h2>
+
+    <form class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label class="form-label">Full Name</label>
+        <input class="form-control" value="Saloni Bansal">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input class="form-control" value="saloni@example.com">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Phone</label>
+        <input class="form-control" value="+91 98765 43210">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="••••••••">
+      </div>
+
+      <div class="col-12 d-flex gap-3">
+        <button class="btn btn-dark">Save Changes</button>
+        <button type="button" class="btn btn-outline-secondary" onclick="changeTab('profile', document.querySelector('.mainleftdiv li.active'))">
+          Cancel
+        </button>
+      </div>
+    </form>
+  `;
+}
+
+
+function changeTab(tab, element) {
+  document.querySelectorAll(".mainleftdiv li").forEach(li => li.classList.remove("active"));
+  element.classList.add("active");
+
+  const content = document.getElementById("dashboardContent");
+
+  if (tab === "dashboard") {
+    content.innerHTML = `
+      <h2>Dashboard Overview</h2>
+      <p class="text-muted">Quick access to your account summary.</p>
+      <div class="dashboard-cards">
+        <div class="dash-card"><h4>🛒 Cart</h4><p>2 Items</p></div>
+        <div class="dash-card"><h4>❤️ Wishlist</h4><p>5 Items</p></div>
+        <div class="dash-card"><h4>📦 Orders</h4><p>3 Orders</p></div>
+      </div>
+    `;
+  }
+
+
+  if (tab === "orders") {
+    content.innerHTML = `
+      <h2>Order History</h2>
+      <table class="table mt-3">
+        <tr><th>Order ID</th><th>Status</th><th>Total</th></tr>
+        <tr><td>#SS101</td><td>Delivered</td><td>₹2,499</td></tr>
+        <tr><td>#SS102</td><td>Processing</td><td>₹1,299</td></tr>
+      </table>
+    `;
+  }
+
+  if (tab === "profile") {
+  content.innerHTML = `
+    <h2>My Profile</h2>
+    <p class="text-muted">Personal information associated with your account</p>
+
+    <div class="profile-card mt-4">
+      <div class="row">
+
+        <div class="col-lg-3">
+          <img src="web/images/categoryimg1.jpg" class="profile-img" alt="User">
+        </div>
+
+        <div class="col-lg-9 mt-lg-0 mt-3">
+          <div class="profile-info">
+            <p><strong>Name:</strong> Saloni Bansal</p>
+            <p><strong>Email:</strong> saloni@example.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Member Since:</strong> January 2025</p>
+          </div>
+
+          <button class="btn btn-outline-dark mt-3" onclick="enableEditProfile()">
+            Edit Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+  `;
+}
+
+}
+</script>
+
 </body>
 </html>
