@@ -180,10 +180,13 @@ transition: 0.3s;
 }
 /* banners */
 .b1{
-    background-image: url(../images/b1.webp);
+    background-image: url(../images/banner\ boy\ 2\ copy.png);
 }
 .b2{
-    background-image: url(../images/b2.webp);
+    background-image: url(../images/fasion\ banner\ copy.png);
+}
+.b3{
+    background-image: url(../images/jeans\ banner\ copy.png);
 }
 .banners{
 background-position: center;
